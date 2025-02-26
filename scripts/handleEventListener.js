@@ -1,5 +1,7 @@
 const handleClick = (e)=>{
-    console.log(e.target)
+    // if (e.currentTarget === e.target) {
+        console.log(e.target)
+    // }
 }
 
 document.querySelector("#exampleEventListener").addEventListener("click", handleClick)

@@ -1,7 +1,10 @@
+// Measure time from navigation start
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('DOM fully loaded and parsed');
+    const domLoadTime = ((performance.now() + performance.timing.navigationStart) / 1000).toFixed(2);
+    console.log(`Time until DOM fully loaded: ${domLoadTime} seconds`);
 });
 
 window.addEventListener('load', () => {
-    console.log('All resources finished loading');
+    const pageLoadTime = ((performance.now() + performance.timing.navigationStart) / 1000).toFixed(2);
+    console.log(`Total page load time: ${pageLoadTime} seconds`);
 });
